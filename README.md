@@ -72,7 +72,18 @@ source devel/setup.bash
 ```
 
 ### **5. Configure the TurtleBot3 Model**
-Set the TurtleBot3 model environment variable:
+Set the TurtleBot3 model environment variable as one of the following:
 ```bash
-echo 'export TURTLEBOT3_MODEL=waffle_pi' >> ~/.bashrc
+echo 'export TURTLEBOT3_MODEL=waffle' >> ~/.bashrc # Use this if running in simulation
+echo 'export TURTLEBOT3_MODEL=waffle_pi' >> ~/.bashrc # Use this if running on real robot
 ```
+Note: As a sanity check you can run:
+```bash
+cd ~/catkin_ws
+catkin_make # builds files
+source devel/setup.bash # source files
+roslaunch turtlebot3_gazebo turtlebot3_world.launch # launch gazebo
+```
+In another terminal, run:
+```bash
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
