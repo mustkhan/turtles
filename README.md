@@ -17,6 +17,7 @@ Once the image is built, mount the `user_files` folder and run the container:
 ```bash
 docker run -it --name ros_vnc -v ./user_files:/home/ubuntu/ -p 6080:80 --shm-size=512m vnc_image
 ```
+**Note:** Once you have run this, go to your browser and enter `http://127.0.0.1:6080/`. You will be able to access an Ubuntu 20.04 desktop.
 
 ### **3. Source ROS Noetic**
 Once inside the Docker container, source ROS Noetic:
