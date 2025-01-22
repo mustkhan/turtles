@@ -31,6 +31,12 @@ echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
 
 ### **4. Install TurtleBot3 ROS Packages**
 #### **Install Required ROS Packages**
+Before you proceed, run:
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+Then, run:
 ```bash
 sudo apt-get install ros-noetic-joy ros-noetic-teleop-twist-joy \
 ros-noetic-teleop-twist-keyboard ros-noetic-laser-proc \
