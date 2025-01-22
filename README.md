@@ -59,6 +59,8 @@ sudo apt install ros-noetic-turtlebot3
 #### **Install TurtleBot3 Gazebo Simulation Package**
 Clone the TurtleBot3 simulation repository and build it in your catkin workspace:
 ```bash
+mkdir ~/catkin_ws
+mkdir ~/catkin_ws/src
 cd ~/catkin_ws/src/
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 cd ~/catkin_ws && catkin_make
